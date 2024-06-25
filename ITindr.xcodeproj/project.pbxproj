@@ -23,6 +23,7 @@
 		B0C7F3A62C2AECA100F6E235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0C7F3A82C2AECA100F6E235 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B0C7F3AB2C2AECA100F6E235 /* ITindr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ITindr.xcdatamodel; sourceTree = "<group>"; };
+		B0C7F3BC2C2AEF5400F6E235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +56,10 @@
 		B0C7F39E2C2AEC9F00F6E235 /* ITindr */ = {
 			isa = PBXGroup;
 			children = (
-				B0C7F39F2C2AEC9F00F6E235 /* ITindrApp.swift */,
-				B0C7F3A12C2AEC9F00F6E235 /* ContentView.swift */,
-				B0C7F3A32C2AECA100F6E235 /* Assets.xcassets */,
-				B0C7F3A82C2AECA100F6E235 /* Persistence.swift */,
-				B0C7F3AA2C2AECA100F6E235 /* ITindr.xcdatamodeld */,
+				B0C7F3B82C2AEE5000F6E235 /* Presentation */,
+				B0C7F3B72C2AEE4800F6E235 /* Data */,
+				B0C7F3B42C2AEDFB00F6E235 /* Domain */,
+				B0C7F3B22C2AED8A00F6E235 /* Application */,
 				B0C7F3A52C2AECA100F6E235 /* Preview Content */,
 			);
 			path = ITindr;
@@ -71,6 +71,72 @@
 				B0C7F3A62C2AECA100F6E235 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B0C7F3B22C2AED8A00F6E235 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B0C7F3B32C2AEDA500F6E235 /* Resources */,
+				B0C7F39F2C2AEC9F00F6E235 /* ITindrApp.swift */,
+				B0C7F3A12C2AEC9F00F6E235 /* ContentView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B0C7F3B32C2AEDA500F6E235 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0C7F3A32C2AECA100F6E235 /* Assets.xcassets */,
+				B0C7F3BC2C2AEF5400F6E235 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B0C7F3B42C2AEDFB00F6E235 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B0C7F3B52C2AEDFF00F6E235 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0C7F3B92C2AEECC00F6E235 /* Network */,
+				B0C7F3B62C2AEE0300F6E235 /* CoreData */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0C7F3B62C2AEE0300F6E235 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B0C7F3A82C2AECA100F6E235 /* Persistence.swift */,
+				B0C7F3AA2C2AECA100F6E235 /* ITindr.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B0C7F3B72C2AEE4800F6E235 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B0C7F3B52C2AEDFF00F6E235 /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B0C7F3B82C2AEE5000F6E235 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B0C7F3B92C2AEECC00F6E235 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +181,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = B0C7F3932C2AEC9F00F6E235;
 			productRefGroup = B0C7F39D2C2AEC9F00F6E235 /* Products */;
@@ -205,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -262,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -283,11 +350,13 @@
 				DEVELOPMENT_TEAM = L4LS264DFA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ITindr/Application/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,9 +364,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Tark-Wight.ITindr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,11 +385,13 @@
 				DEVELOPMENT_TEAM = L4LS264DFA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ITindr/Application/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,9 +399,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Tark-Wight.ITindr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
