@@ -13,7 +13,29 @@
 		89866F482C49164600EEAE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89866F462C49164600EEAE1E /* Main.storyboard */; };
 		89866F4A2C49164800EEAE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89866F492C49164800EEAE1E /* Assets.xcassets */; };
 		89866F4D2C49164800EEAE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89866F4B2C49164800EEAE1E /* LaunchScreen.storyboard */; };
+		89866FC42C4933F900EEAE1E /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FC32C4933F900EEAE1E /* CommonUI.framework */; };
+		89866FC52C4933F900EEAE1E /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FC32C4933F900EEAE1E /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89866FC82C4933FF00EEAE1E /* ClientAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FC72C4933FF00EEAE1E /* ClientAPI.framework */; };
+		89866FC92C4933FF00EEAE1E /* ClientAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FC72C4933FF00EEAE1E /* ClientAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89866FCB2C49340300EEAE1E /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FCA2C49340300EEAE1E /* Utilities.framework */; };
+		89866FCC2C49340300EEAE1E /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FCA2C49340300EEAE1E /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		89866FC62C4933F900EEAE1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				89866FC92C4933FF00EEAE1E /* ClientAPI.framework in Embed Frameworks */,
+				89866FCC2C49340300EEAE1E /* Utilities.framework in Embed Frameworks */,
+				89866FC52C4933F900EEAE1E /* CommonUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		89866F3D2C49164600EEAE1E /* ITindr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITindr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +46,9 @@
 		89866F492C49164800EEAE1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89866F4C2C49164800EEAE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89866F4E2C49164800EEAE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89866FC32C4933F900EEAE1E /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89866FC72C4933FF00EEAE1E /* ClientAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClientAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89866FCA2C49340300EEAE1E /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89866FC82C4933FF00EEAE1E /* ClientAPI.framework in Frameworks */,
+				89866FCB2C49340300EEAE1E /* Utilities.framework in Frameworks */,
+				89866FC42C4933F900EEAE1E /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,7 @@
 			children = (
 				89866F3F2C49164600EEAE1E /* ITindr */,
 				89866F3E2C49164600EEAE1E /* Products */,
+				89866FC22C4933F900EEAE1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +96,16 @@
 			path = ITindr;
 			sourceTree = "<group>";
 		};
+		89866FC22C4933F900EEAE1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89866FCA2C49340300EEAE1E /* Utilities.framework */,
+				89866FC72C4933FF00EEAE1E /* ClientAPI.framework */,
+				89866FC32C4933F900EEAE1E /* CommonUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +116,7 @@
 				89866F392C49164600EEAE1E /* Sources */,
 				89866F3A2C49164600EEAE1E /* Frameworks */,
 				89866F3B2C49164600EEAE1E /* Resources */,
+				89866FC62C4933F900EEAE1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

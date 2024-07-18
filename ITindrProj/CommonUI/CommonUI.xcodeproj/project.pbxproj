@@ -9,12 +9,29 @@
 /* Begin PBXBuildFile section */
 		89866F792C49183400EEAE1E /* CommonUI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 89866F782C49183400EEAE1E /* CommonUI.docc */; };
 		89866F7A2C49183400EEAE1E /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 89866F772C49183400EEAE1E /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89866FBF2C4933C900EEAE1E /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FBE2C4933C900EEAE1E /* Utilities.framework */; };
+		89866FC02C4933C900EEAE1E /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89866FBE2C4933C900EEAE1E /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		89866FC12C4933C900EEAE1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				89866FC02C4933C900EEAE1E /* Utilities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		89866F742C49183400EEAE1E /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89866F772C49183400EEAE1E /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
 		89866F782C49183400EEAE1E /* CommonUI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CommonUI.docc; sourceTree = "<group>"; };
+		89866FBE2C4933C900EEAE1E /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89866FBF2C4933C900EEAE1E /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +51,7 @@
 			children = (
 				89866F762C49183400EEAE1E /* CommonUI */,
 				89866F752C49183400EEAE1E /* Products */,
+				89866FBD2C4933C900EEAE1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +70,14 @@
 				89866F782C49183400EEAE1E /* CommonUI.docc */,
 			);
 			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		89866FBD2C4933C900EEAE1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89866FBE2C4933C900EEAE1E /* Utilities.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,6 +102,7 @@
 				89866F702C49183400EEAE1E /* Sources */,
 				89866F712C49183400EEAE1E /* Frameworks */,
 				89866F722C49183400EEAE1E /* Resources */,
+				89866FC12C4933C900EEAE1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
