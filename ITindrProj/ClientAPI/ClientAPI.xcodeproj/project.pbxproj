@@ -18,7 +18,7 @@
 		89A1155B2C4F760A00FA4974 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1153C2C4F760A00FA4974 /* UserAPI.swift */; };
 		89A1155C2C4F760A00FA4974 /* ChatIdMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1153E2C4F760A00FA4974 /* ChatIdMessageBody.swift */; };
 		89A1155D2C4F760A00FA4974 /* CreateChatBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1153F2C4F760A00FA4974 /* CreateChatBody.swift */; };
-		89A1155E2C4F760A00FA4974 /* AuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115402C4F760A00FA4974 /* AuthDTO.swift */; };
+		89A1155E2C4F760A00FA4974 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115402C4F760A00FA4974 /* TokenDTO.swift */; };
 		89A115612C4F760A00FA4974 /* MutualLikeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115432C4F760A00FA4974 /* MutualLikeDTO.swift */; };
 		89A115622C4F760A00FA4974 /* ChatDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115442C4F760A00FA4974 /* ChatDTO.swift */; };
 		89A115642C4F760A00FA4974 /* AuthBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115462C4F760A00FA4974 /* AuthBody.swift */; };
@@ -45,7 +45,7 @@
 		89A1153C2C4F760A00FA4974 /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		89A1153E2C4F760A00FA4974 /* ChatIdMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatIdMessageBody.swift; sourceTree = "<group>"; };
 		89A1153F2C4F760A00FA4974 /* CreateChatBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChatBody.swift; sourceTree = "<group>"; };
-		89A115402C4F760A00FA4974 /* AuthDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
+		89A115402C4F760A00FA4974 /* TokenDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
 		89A115432C4F760A00FA4974 /* MutualLikeDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutualLikeDTO.swift; sourceTree = "<group>"; };
 		89A115442C4F760A00FA4974 /* ChatDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDTO.swift; sourceTree = "<group>"; };
 		89A115462C4F760A00FA4974 /* AuthBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthBody.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		89A115D32C4FC98900FA4974 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				89A115402C4F760A00FA4974 /* AuthDTO.swift */,
+				89A115402C4F760A00FA4974 /* TokenDTO.swift */,
 				89A115732C4F829000FA4974 /* TopicDTO.swift */,
 				89A115752C4F841900FA4974 /* UserProfileDTO.swift */,
 				89A115CD2C4F96D100FA4974 /* ProfileDTO.swift */,
@@ -240,7 +240,7 @@
 				89A115662C4F760A00FA4974 /* RefreshTokenBody.swift in Sources */,
 				89A115572C4F760A00FA4974 /* AuthAPI.swift in Sources */,
 				89A1155A2C4F760A00FA4974 /* TopicAPI.swift in Sources */,
-				89A1155E2C4F760A00FA4974 /* AuthDTO.swift in Sources */,
+				89A1155E2C4F760A00FA4974 /* TokenDTO.swift in Sources */,
 				89A115622C4F760A00FA4974 /* ChatDTO.swift in Sources */,
 				89866F632C49171100EEAE1E /* ClientAPI.docc in Sources */,
 				89A115592C4F760A00FA4974 /* ProfileAPI.swift in Sources */,

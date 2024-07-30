@@ -20,7 +20,7 @@ open class AuthAPI {
      */
     open class func login(
         body: AuthBody,
-        completion: @escaping (_ data: AuthDTO?, _ error: Error?) -> Void
+        completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Auth.login
         
@@ -31,7 +31,7 @@ open class AuthAPI {
             encoder: JSONParameterEncoder.default
         )
         .validate()
-        .responseDecodable(of: AuthDTO.self) { response in
+        .responseDecodable(of: TokenDTO.self) { response in
             switch response.result {
             case .success(let data):
                 completion(data, nil)
@@ -52,7 +52,7 @@ open class AuthAPI {
      */
     open class func register(
         body: AuthBody,
-        completion: @escaping (_ data: AuthDTO?, _ error: Error?) -> Void
+        completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Auth.register
         
@@ -63,7 +63,7 @@ open class AuthAPI {
             encoder: JSONParameterEncoder.default
         )
         .validate()
-        .responseDecodable(of: AuthDTO.self) { response in
+        .responseDecodable(of: TokenDTO.self) { response in
             switch response.result {
             case .success(let data):
                 completion(data, nil)
@@ -83,23 +83,23 @@ open class AuthAPI {
        - completion: The closure to call with the result.
      */
     open class func refresh(
-        authDTO: AuthDTO,
-        completion: @escaping (_ data: AuthDTO?, _ error: Error?) -> Void
+        token: TokenDTO,
+        completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Auth.refresh
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(authDTO.accessToken)"
+            "Authorization": "Bearer \(token.accessToken)"
         ]
         
         AF.request(
             url,
             method: .post,
-            parameters: authDTO.refreshToken,
+            parameters: token.refreshToken,
             encoder: JSONParameterEncoder.default,
             headers: headers
         )
         .validate()
-        .responseDecodable(of: AuthDTO.self) { response in
+        .responseDecodable(of: TokenDTO.self) { response in
             switch response.result {
             case .success(let data):
                 completion(data, nil)
@@ -119,12 +119,12 @@ open class AuthAPI {
        - completion: The closure to call with the result.
      */
     open class func logout(
-        authDTO: AuthDTO,
+        token: TokenDTO,
         completion: @escaping (_ data: Void?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Auth.logout
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(authDTO.accessToken)"
+            "Authorization": "Bearer \(token.accessToken)"
         ]
         
         AF.request(
