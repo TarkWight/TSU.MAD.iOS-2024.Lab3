@@ -17,5 +17,7 @@ public struct APIConstants {
         static let logout = "\(basePath)/auth/logout"
     }
     
+    // Topic Endpoints
+    static let topic = "\(basePath)/topic"
    
 }

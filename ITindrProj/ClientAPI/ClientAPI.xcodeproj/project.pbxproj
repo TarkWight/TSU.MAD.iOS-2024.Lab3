@@ -23,7 +23,6 @@
 		89A115622C4F760A00FA4974 /* ChatDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115442C4F760A00FA4974 /* ChatDTO.swift */; };
 		89A115642C4F760A00FA4974 /* AuthBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115462C4F760A00FA4974 /* AuthBody.swift */; };
 		89A115652C4F760A00FA4974 /* ProfileAvatarBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115472C4F760A00FA4974 /* ProfileAvatarBody.swift */; };
-		89A115662C4F760A00FA4974 /* RefreshTokenBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115482C4F760A00FA4974 /* RefreshTokenBody.swift */; };
 		89A115682C4F760A00FA4974 /* UpdateProfileBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1154A2C4F760A00FA4974 /* UpdateProfileBody.swift */; };
 		89A1156B2C4F760A00FA4974 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1154E2C4F760A00FA4974 /* APIConstants.swift */; };
 		89A115742C4F829000FA4974 /* TopicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115732C4F829000FA4974 /* TopicDTO.swift */; };
@@ -50,7 +49,6 @@
 		89A115442C4F760A00FA4974 /* ChatDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDTO.swift; sourceTree = "<group>"; };
 		89A115462C4F760A00FA4974 /* AuthBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthBody.swift; sourceTree = "<group>"; };
 		89A115472C4F760A00FA4974 /* ProfileAvatarBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAvatarBody.swift; sourceTree = "<group>"; };
-		89A115482C4F760A00FA4974 /* RefreshTokenBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenBody.swift; sourceTree = "<group>"; };
 		89A1154A2C4F760A00FA4974 /* UpdateProfileBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileBody.swift; sourceTree = "<group>"; };
 		89A1154E2C4F760A00FA4974 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		89A115732C4F829000FA4974 /* TopicDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDTO.swift; sourceTree = "<group>"; };
@@ -102,9 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				89A115382C4F760A00FA4974 /* AuthAPI.swift */,
+				89A1153B2C4F760A00FA4974 /* TopicAPI.swift */,
 				89A115392C4F760A00FA4974 /* ChatAPI.swift */,
 				89A1153A2C4F760A00FA4974 /* ProfileAPI.swift */,
-				89A1153B2C4F760A00FA4974 /* TopicAPI.swift */,
 				89A1153C2C4F760A00FA4974 /* UserAPI.swift */,
 			);
 			path = APIs;
@@ -128,7 +126,6 @@
 				89A1153F2C4F760A00FA4974 /* CreateChatBody.swift */,
 				89A115462C4F760A00FA4974 /* AuthBody.swift */,
 				89A115472C4F760A00FA4974 /* ProfileAvatarBody.swift */,
-				89A115482C4F760A00FA4974 /* RefreshTokenBody.swift */,
 				89A1154A2C4F760A00FA4974 /* UpdateProfileBody.swift */,
 				89A1153E2C4F760A00FA4974 /* ChatIdMessageBody.swift */,
 			);
@@ -237,7 +234,6 @@
 			files = (
 				89A115652C4F760A00FA4974 /* ProfileAvatarBody.swift in Sources */,
 				89A115742C4F829000FA4974 /* TopicDTO.swift in Sources */,
-				89A115662C4F760A00FA4974 /* RefreshTokenBody.swift in Sources */,
 				89A115572C4F760A00FA4974 /* AuthAPI.swift in Sources */,
 				89A1155A2C4F760A00FA4974 /* TopicAPI.swift in Sources */,
 				89A1155E2C4F760A00FA4974 /* TokenDTO.swift in Sources */,

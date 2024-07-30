@@ -1,6 +1,6 @@
 //
 //  AuthAPI.swift
-//  ITindr
+//  ClientAPI
 //
 //  Created by Tark Wight on 23.07.2024.
 //
@@ -8,7 +8,6 @@
 import Alamofire
 
 open class AuthAPI {
-    
     // MARK: - Login
     
     /**
@@ -79,7 +78,7 @@ open class AuthAPI {
      Refreshes the authentication token.
      
      - Parameters:
-       - authDTO: The current authentication data.
+       - token: The current token data.
        - completion: The closure to call with the result.
      */
     open class func refresh(
@@ -115,7 +114,7 @@ open class AuthAPI {
      Logs out the current user.
      
      - Parameters:
-       - authDTO: The current authentication data.
+       - token: The current token data.
        - completion: The closure to call with the result.
      */
     open class func logout(
