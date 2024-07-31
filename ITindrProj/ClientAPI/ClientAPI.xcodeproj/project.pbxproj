@@ -28,7 +28,6 @@
 		89A115742C4F829000FA4974 /* TopicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115732C4F829000FA4974 /* TopicDTO.swift */; };
 		89A115762C4F841900FA4974 /* ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115752C4F841900FA4974 /* ProfileDTO.swift */; };
 		89A115782C4F867E00FA4974 /* MessageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115772C4F867E00FA4974 /* MessageDTO.swift */; };
-		89A115CE2C4F96D100FA4974 /* _ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115CD2C4F96D100FA4974 /* _ProfileDTO.swift */; };
 		89A115D02C4F9A4200FA4974 /* ChatWithLastMessageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A115CF2C4F9A4200FA4974 /* ChatWithLastMessageDTO.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +53,6 @@
 		89A115732C4F829000FA4974 /* TopicDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDTO.swift; sourceTree = "<group>"; };
 		89A115752C4F841900FA4974 /* ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDTO.swift; sourceTree = "<group>"; };
 		89A115772C4F867E00FA4974 /* MessageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDTO.swift; sourceTree = "<group>"; };
-		89A115CD2C4F96D100FA4974 /* _ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _ProfileDTO.swift; sourceTree = "<group>"; };
 		89A115CF2C4F9A4200FA4974 /* ChatWithLastMessageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWithLastMessageDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +100,8 @@
 				89A115382C4F760A00FA4974 /* AuthAPI.swift */,
 				89A1153B2C4F760A00FA4974 /* TopicAPI.swift */,
 				89A1153A2C4F760A00FA4974 /* ProfileAPI.swift */,
-				89A115392C4F760A00FA4974 /* ChatAPI.swift */,
 				89A1153C2C4F760A00FA4974 /* UserAPI.swift */,
+				89A115392C4F760A00FA4974 /* ChatAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -125,8 +123,8 @@
 			children = (
 				89A115462C4F760A00FA4974 /* AuthBody.swift */,
 				89A1154A2C4F760A00FA4974 /* UpdateProfileBody.swift */,
-				89A1153F2C4F760A00FA4974 /* CreateChatBody.swift */,
 				89A115472C4F760A00FA4974 /* ProfileAvatarBody.swift */,
+				89A1153F2C4F760A00FA4974 /* CreateChatBody.swift */,
 				89A1153E2C4F760A00FA4974 /* ChatIdMessageBody.swift */,
 			);
 			path = Body;
@@ -138,7 +136,6 @@
 				89A115402C4F760A00FA4974 /* TokenDTO.swift */,
 				89A115732C4F829000FA4974 /* TopicDTO.swift */,
 				89A115752C4F841900FA4974 /* ProfileDTO.swift */,
-				89A115CD2C4F96D100FA4974 /* _ProfileDTO.swift */,
 				89A115432C4F760A00FA4974 /* MutualLikeDTO.swift */,
 				89A115442C4F760A00FA4974 /* ChatDTO.swift */,
 				89A115772C4F867E00FA4974 /* MessageDTO.swift */,
@@ -242,7 +239,6 @@
 				89A115592C4F760A00FA4974 /* ProfileAPI.swift in Sources */,
 				8900CEAB2C5965790083ED57 /* temp.swift in Sources */,
 				89A1155C2C4F760A00FA4974 /* ChatIdMessageBody.swift in Sources */,
-				89A115CE2C4F96D100FA4974 /* _ProfileDTO.swift in Sources */,
 				89A115582C4F760A00FA4974 /* ChatAPI.swift in Sources */,
 				89A1156B2C4F760A00FA4974 /* APIConstants.swift in Sources */,
 				89A115D02C4F9A4200FA4974 /* ChatWithLastMessageDTO.swift in Sources */,

@@ -20,7 +20,6 @@ public struct APIConstants {
     // Topic Endpoints
     static let topic = "\(basePath)/topic"
    
-    
     // Profile Endpoints
     public struct Profile {
         static let avatarDelete = "\(basePath)/profile/avatar"
@@ -28,6 +27,19 @@ public struct APIConstants {
         static let get = "\(basePath)/profile"
         static let patch = "\(basePath)/profile"
     }
-
+    
+    
+    // User Endpoints
+    public struct User {
+        static let feed = "\(basePath)/user/feed"
+        static let get = "\(basePath)/user"
+        static func dislike(userId: UUID) -> String {
+            return "\(basePath)/user/\(userId.uuidString)/dislike"
+        }
+        static func like(userId: UUID) -> String {
+            return "\(basePath)/user/\(userId.uuidString)/like"
+        }
+    }
+    
   
 }
