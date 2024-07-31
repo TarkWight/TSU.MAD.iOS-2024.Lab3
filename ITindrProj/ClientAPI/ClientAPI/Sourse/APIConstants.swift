@@ -41,5 +41,14 @@ public struct APIConstants {
         }
     }
     
-  
+    // Chat Endpoints
+    public struct Chat {
+        static func messages(chatId: UUID) -> String {
+            return "\(basePath)/chat/\(chatId.uuidString)/message"
+        }
+        static let create = "\(basePath)/chat"
+        static let list = "\(basePath)/chat"
+    }
+    
+    
 }
