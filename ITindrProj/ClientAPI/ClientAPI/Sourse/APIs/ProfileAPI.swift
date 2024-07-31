@@ -19,12 +19,12 @@ open class ProfileAPI {
        - completion: The closure to call with the result.
      */
     open class func getProfile(
-        token: TokenDTO,
+        token: String,
         completion: @escaping (_ data: ProfileDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Profile.get
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
         
         AF.request(
@@ -54,13 +54,13 @@ open class ProfileAPI {
        - completion: The closure to call with the result.
      */
     open class func updateProfile(
-        body: UpdateProfileBody,
-        token: TokenDTO,
+        body: UpdateProfileDTO,
+        token: String,
         completion: @escaping (_ data: ProfileDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Profile.patch
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
         
         AF.request(
@@ -93,12 +93,12 @@ open class ProfileAPI {
      */
     open class func uploadAvatar(
         avatar: Data,
-        token: TokenDTO,
+        token: String,
         completion: @escaping (_ data: Void?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Profile.avatarPost
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
         
         AF.upload(
@@ -135,12 +135,12 @@ open class ProfileAPI {
        - completion: The closure to call with the result.
      */
     open class func deleteAvatar(
-        token: TokenDTO,
+        token: String,
         completion: @escaping (_ data: Void?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Profile.avatarDelete
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
         
         AF.request(

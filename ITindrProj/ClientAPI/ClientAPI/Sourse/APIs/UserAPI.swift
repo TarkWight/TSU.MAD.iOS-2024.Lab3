@@ -8,20 +8,21 @@
 import Alamofire
 
 open class UserAPI {
+    //MARK: - Get user feed
     /**
      Getting a list of users who may be of interest to you
      
      - Parameters:
-        - token: The authentication token
-        - completion: completion handler to receive the data and the error objects
+        - token: The token containing the access token.
+        - completion: completion handler to receive the data and the error objects.
      */
     open class func getUserFeed(
-        token: TokenDTO,
+        token: String,
         completion: @escaping (_ data: [ProfileDTO]?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.User.feed
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
 
         AF.request(
@@ -40,17 +41,18 @@ open class UserAPI {
         }
     }
 
+    //MARK: - Get a list of all users
     /**
      Getting a list of all users
      
      - Parameters:
-        - token: The authentication token
-        - limit: (query) Quantity per request
-        - offset: (query) Offset for the selection
-        - completion: completion handler to receive the data and the error objects
+        - token: The token containing the access token.
+        - limit: (query) Quantity per request.
+        - offset: (query) Offset for the selection.
+        - completion: completion handler to receive the data and the error objects.
      */
     open class func getUsers(
-        token: TokenDTO,
+        token: String,
         limit: Int,
         offset: Int,
         completion: @escaping (_ data: [ProfileDTO]?, _ error: Error?) -> Void
@@ -67,7 +69,7 @@ open class UserAPI {
         }
 
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
 
         AF.request(
@@ -86,22 +88,23 @@ open class UserAPI {
         }
     }
 
+    //MARK: - Disliking a user
     /**
      Disliking a user
      
      - Parameters:
-        - token: The authentication token
-        - userId: (path) ID of user
-        - completion: completion handler to receive the data and the error objects
+        - token: The token containing the access token.
+        - userId: (path) ID of user.
+        - completion: completion handler to receive the data and the error objects.
      */
     open class func dislikeUser(
-        token: TokenDTO,
+        token: String,
         userId: UUID,
         completion: @escaping (_ data: Void?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.User.dislike(userId: userId)
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
 
         AF.request(
@@ -120,22 +123,23 @@ open class UserAPI {
         }
     }
 
+    //MARK: - Liking a user
     /**
      Liking a user
 
      - Parameters:
-        - token: The authentication token
-        - userId: (path) ID of user
-        - completion: completion handler to receive the data and the error objects
+        - token: The token containing the access token.
+        - userId: (path) ID of user.
+        - completion: completion handler to receive the data and the error objects.
      */
     open class func likeUser(
-        token: TokenDTO,
+        token: String,
         userId: UUID,
         completion: @escaping (_ data: MutualLikeDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.User.like(userId: userId)
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
 
         AF.request(

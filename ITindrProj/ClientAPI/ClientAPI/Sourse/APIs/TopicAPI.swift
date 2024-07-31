@@ -9,7 +9,7 @@ import Alamofire
 
 open class TopicAPI {
     
-    // MARK: - Getting a list of all topics
+    // MARK: - Get topics
     /**
      Getting a list of all topics.
 
@@ -18,12 +18,12 @@ open class TopicAPI {
        - completion: The closure to call with the result.
      */
     open class func topic(
-        token: TokenDTO,
+        token: String,
         completion: @escaping (_ data: [TopicDTO]?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.topic
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
         
         AF.request(url,

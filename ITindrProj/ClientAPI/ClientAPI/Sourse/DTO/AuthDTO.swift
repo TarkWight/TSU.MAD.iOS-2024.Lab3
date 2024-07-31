@@ -1,11 +1,11 @@
 //
-// AuthBody.swift
+// AuthDTO.swift
 //
 //  Created by Tark Wight on 23.07.2024.
 //
 
 
-public struct AuthBody: Codable {
+public struct AuthDTO: Codable {
 
     public var email: String
     public var password: String

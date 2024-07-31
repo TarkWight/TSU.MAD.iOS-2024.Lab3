@@ -1,5 +1,5 @@
 //
-// UpdateProfileBody.swift
+// UpdateProfileDTO.swift
 //
 //  Created by Tark Wight on 23.07.2024.
 //
@@ -8,11 +8,11 @@ import Foundation
 
 
 
-public struct UpdateProfileBody: Codable {
+public struct UpdateProfileDTO: Codable {
 
-    public var name: String
-    public var aboutMyself: String?
-    public var topics: [UUID]?
+    public let name: String
+    public let aboutMyself: String?
+    public let topics: [UUID]?
 
     public init(name: String, aboutMyself: String? = nil, topics: [UUID]? = nil) {
         self.name = name

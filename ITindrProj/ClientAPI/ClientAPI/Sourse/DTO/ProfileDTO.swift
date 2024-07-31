@@ -5,8 +5,6 @@
 //  Created by Tark Wight on 23.07.2024.
 //
 
-import Foundation
-
 public struct ProfileDTO: Codable {
     
     public let userId: UUID

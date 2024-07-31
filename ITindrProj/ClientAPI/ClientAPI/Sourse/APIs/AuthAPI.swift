@@ -19,7 +19,7 @@ open class AuthAPI {
        - completion: The closure to call with the result.
      */
     open class func login(
-        body: AuthBody,
+        body: AuthDTO,
         completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Auth.login
@@ -51,7 +51,7 @@ open class AuthAPI {
        - completion: The closure to call with the result.
      */
     open class func register(
-        body: AuthBody,
+        body: AuthDTO,
         completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Auth.register
@@ -119,12 +119,12 @@ open class AuthAPI {
        - completion: The closure to call with the result.
      */
     open class func logout(
-        token: TokenDTO,
+        token: String,
         completion: @escaping (_ data: Void?, _ error: Error?) -> Void
     ) {
         let url = APIConstants.Auth.logout
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token.accessToken)"
+            "Authorization": "Bearer \(token)"
         ]
         
         AF.request(
