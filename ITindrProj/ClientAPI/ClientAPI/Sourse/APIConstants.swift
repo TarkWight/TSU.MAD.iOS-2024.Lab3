@@ -20,4 +20,14 @@ public struct APIConstants {
     // Topic Endpoints
     static let topic = "\(basePath)/topic"
    
+    
+    // Profile Endpoints
+    public struct Profile {
+        static let avatarDelete = "\(basePath)/profile/avatar"
+        static let avatarPost = "\(basePath)/profile/avatar"
+        static let get = "\(basePath)/profile"
+        static let patch = "\(basePath)/profile"
+    }
+
+  
 }

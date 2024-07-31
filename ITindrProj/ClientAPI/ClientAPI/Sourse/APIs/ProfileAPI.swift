@@ -1,105 +1,39 @@
 //
-//  AuthAPI.swift
-//  ClientAPI
+//  ProfileAPI.swift
+//  ITindr
 //
 //  Created by Tark Wight on 23.07.2024.
 //
 
 import Alamofire
 
-open class AuthAPI {
-    
-    // MARK: - Login
-    
-    /**
-     Logs in a user with the provided credentials.
-     
-     - Parameters:
-       - body: The login credentials.
-       - completion: The closure to call with the result.
-     */
-    open class func login(
-        body: AuthBody,
-        completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
-    ) {
-        let url = APIConstants.Auth.login
-        
-        AF.request(
-            url,
-            method: .post,
-            parameters: body,
-            encoder: JSONParameterEncoder.default
-        )
-        .validate()
-        .responseDecodable(of: TokenDTO.self) { response in
-            switch response.result {
-            case .success(let data):
-                completion(data, nil)
-            case .failure(let error):
-                completion(nil, error)
-            }
-        }
-    }
-    
-    // MARK: - Register
+open class ProfileAPI {
+
+    // MARK: - Retrieving User Profile Information
     
     /**
-     Registers a new user with the provided details.
-     
-     - Parameters:
-       - body: The registration details.
-       - completion: The closure to call with the result.
-     */
-    open class func register(
-        body: AuthBody,
-        completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
-    ) {
-        let url = APIConstants.Auth.register
-        
-        AF.request(
-            url,
-            method: .post,
-            parameters: body,
-            encoder: JSONParameterEncoder.default
-        )
-        .validate()
-        .responseDecodable(of: TokenDTO.self) { response in
-            switch response.result {
-            case .success(let data):
-                completion(data, nil)
-            case .failure(let error):
-                completion(nil, error)
-            }
-        }
-    }
-    
-    // MARK: - Refresh
-    
-    /**
-     Refreshes the authentication token.
+     Retrieves the user profile information.
      
      - Parameters:
        - token: The token containing the access token.
        - completion: The closure to call with the result.
      */
-    open class func refresh(
+    open class func getProfile(
         token: TokenDTO,
-        completion: @escaping (_ data: TokenDTO?, _ error: Error?) -> Void
+        completion: @escaping (_ data: ProfileDTO?, _ error: Error?) -> Void
     ) {
-        let url = APIConstants.Auth.refresh
+        let url = APIConstants.Profile.get
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token.accessToken)"
         ]
         
         AF.request(
             url,
-            method: .post,
-            parameters: token.refreshToken,
-            encoder: JSONParameterEncoder.default,
+            method: .get,
             headers: headers
         )
         .validate()
-        .responseDecodable(of: TokenDTO.self) { response in
+        .responseDecodable(of: ProfileDTO.self) { response in
             switch response.result {
             case .success(let data):
                 completion(data, nil)
@@ -109,20 +43,102 @@ open class AuthAPI {
         }
     }
     
-    // MARK: - Logout
+    // MARK: - Updating User Profile
     
     /**
-     Logs out the current user.
+     Updates the user profile with the provided details.
+     
+     - Parameters:
+       - body: The profile details to update.
+       - token: The token containing the access token.
+       - completion: The closure to call with the result.
+     */
+    open class func updateProfile(
+        body: UpdateProfileBody,
+        token: TokenDTO,
+        completion: @escaping (_ data: ProfileDTO?, _ error: Error?) -> Void
+    ) {
+        let url = APIConstants.Profile.patch
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token.accessToken)"
+        ]
+        
+        AF.request(
+            url,
+            method: .patch,
+            parameters: body,
+            encoder: JSONParameterEncoder.default,
+            headers: headers
+        )
+        .validate()
+        .responseDecodable(of: ProfileDTO.self) { response in
+            switch response.result {
+            case .success(let data):
+                completion(data, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
+    // MARK: - Uploading User Avatar
+    
+    /**
+     Uploads a new avatar for the user.
+     
+     - Parameters:
+       - avatar: The avatar image data.
+       - token: The token containing the access token.
+       - completion: The closure to call with the result.
+     */
+    open class func uploadAvatar(
+        avatar: Data,
+        token: TokenDTO,
+        completion: @escaping (_ data: Void?, _ error: Error?) -> Void
+    ) {
+        let url = APIConstants.Profile.avatarPost
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token.accessToken)"
+        ]
+        
+        AF.upload(
+            multipartFormData: { multipartFormData in
+                multipartFormData.append(
+                    avatar,
+                    withName: "avatar",
+                    fileName: "avatar.jpg",
+                    mimeType: "image/jpeg"
+                )
+            },
+            to: url,
+            method: .post,
+            headers: headers
+        )
+        .validate()
+        .response { response in
+            switch response.result {
+            case .success:
+                completion((), nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
+    // MARK: - Delete User Avatar
+    
+    /**
+     Deletes the user's avatar.
      
      - Parameters:
        - token: The token containing the access token.
        - completion: The closure to call with the result.
      */
-    open class func logout(
+    open class func deleteAvatar(
         token: TokenDTO,
         completion: @escaping (_ data: Void?, _ error: Error?) -> Void
     ) {
-        let url = APIConstants.Auth.logout
+        let url = APIConstants.Profile.avatarDelete
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token.accessToken)"
         ]

@@ -8,12 +8,13 @@
 import Alamofire
 
 open class TopicAPI {
+    
     // MARK: - Getting a list of all topics
     /**
      Getting a list of all topics.
-     
+
      - Parameters:
-       - token: The current token data.
+       - token: The token containing the access token.
        - completion: The closure to call with the result.
      */
     open class func topic(
